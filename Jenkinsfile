@@ -11,6 +11,11 @@ pipeline {
                 echo 'make check'
             }
         }
+		stage('Test Again') {
+            steps {
+                echo 'make check'
+            }
+        }
         stage('Deploy') {
             when { tag "release-*" }
             steps {
