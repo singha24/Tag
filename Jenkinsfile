@@ -16,6 +16,9 @@ pipeline {
             steps {
                 echo 'Deploying only because this commit is tagged...'
                 echo 'make deploy'
+				
+                build 'PoC_Gerrit_PostMerge'	//this is where we specify which job to invoke.
+            
             }
         }
     }
